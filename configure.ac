@@ -53,6 +53,9 @@ AC_CHECK_LIB(z, gzclose, [],
 # Obtain compiler/linker options for dependencies
 PKG_CHECK_MODULES(FONTENC, xproto)
 
+# Checks for library functions.
+AC_REPLACE_FUNCS([reallocarray])
+
 # Allow checking code with lint, sparse, etc.
 XORG_WITH_LINT
 LINT_FLAGS="${LINT_FLAGS} ${FONTENC_CFLAGS}"
