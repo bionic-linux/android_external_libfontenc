@@ -50,7 +50,7 @@ AC_CHECK_HEADER([zlib.h], [],
 AC_CHECK_LIB(z, gzclose, [],
              AC_MSG_FAILURE([zlib is required to compile libfontenc]))
 
-# Obtain compiler/linker options for depedencies
+# Obtain compiler/linker options for dependencies
 PKG_CHECK_MODULES(FONTENC, xproto)
 
 # Allow checking code with lint, sparse, etc.
