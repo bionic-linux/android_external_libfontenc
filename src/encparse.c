@@ -27,6 +27,10 @@ THE SOFTWARE.
    hand, we do use strcasecmp, but only on strings that we've checked
    to be pure ASCII.  Bloody ``Code Set Independence''. */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <string.h>
 #include <strings.h>
 #include <stdio.h>

@@ -22,6 +22,10 @@ THE SOFTWARE.
 
 /* Backend-independent encoding code */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <string.h>
 #include <strings.h>
 #include <stdlib.h>
