@@ -58,6 +58,9 @@ AC_CHECK_LIB(z, gzclose, [],
 # Obtain compiler/linker options for dependencies
 PKG_CHECK_MODULES(FONTENC, xproto)
 
+# Checks for typedefs, structures, and compiler characteristics.
+AC_SYS_LARGEFILE
+
 # Checks for library functions.
 AC_REPLACE_FUNCS([reallocarray])
 
