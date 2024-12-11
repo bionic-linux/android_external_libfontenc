@@ -1,0 +1,23 @@
+cc_library {
+    name: "libfontenc",
+    cflags: [
+        "-DHAVE_ZLIB_H",
+        "-DFONT_ENCODINGS_DIRECTORY=\"/system/share/fonts/x11/encodings\"",
+
+        "-Wno-missing-field-initializers",
+        "-Wno-unused-parameter",
+    ],
+    srcs: [
+        "src/encparse.c",
+        "src/fontenc.c",
+        "src/reallocarray.c",
+    ],
+    shared_libs: [
+        "libz",
+    ],
+    header_libs: ["xorgproto"],
+    export_header_lib_headers: ["xorgproto"],
+    export_include_dirs: ["include"],
+    local_include_dirs: ["src"],
+    required: ["xorg_font_encodings"],
+}
